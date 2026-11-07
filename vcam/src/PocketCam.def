@@ -1,0 +1,6 @@
+LIBRARY PocketCam.ax
+EXPORTS
+    DllGetClassObject
+    DllCanUnloadNow
+    DllRegisterServer
+    DllUnregisterServer

@@ -1,0 +1,23 @@
+# 构建产物
+bin/
+obj/
+build/
+dist/
+*.vs/
+.vs/
+.idea/
+*.user
+
+# 二进制文件（成品通过 Release 附件分发，不入库）
+*.apk
+*.ax
+*.exe
+*.dll
+*.pdb
+*.zip
+*.keystore
+*.jks
+
+# 临时文件
+*.log
+*.tmp

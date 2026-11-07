@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Platforms>x64</Platforms>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Concentus" Version="2.2.2" />
+    <PackageReference Include="NAudio" Version="2.2.1" />
+    <PackageReference Include="Makaretu.Dns.Multicast" Version="0.27.0" />
+    <PackageReference Include="QRCoder" Version="1.6.0" />
+    <PackageReference Include="SIPSorcery" Version="10.0.17" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- 内置软件 H.264 解码器（Cisco OpenH264 官方 CDN 二进制），系统没有 MF 解码器时使用 -->
+    <None Include="third_party\openh264-2.2.0-win64.dll"
+          Link="openh264-2.2.0-win64.dll"
+          CopyToOutputDirectory="PreserveNewest"
+          CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>

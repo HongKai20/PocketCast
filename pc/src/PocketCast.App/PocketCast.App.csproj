@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Platforms>x64</Platforms>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <AssemblyName>PocketCast</AssemblyName>
+    <RootNamespace>PocketCast.App</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\PocketCast.Core\PocketCast.Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- 虚拟摄像头滤镜随程序一起发布，首次启动自动注册 -->
+    <None Include="..\..\..\vcam\build\PocketCam.ax"
+          Link="vcam\PocketCam.ax"
+          Condition="Exists('..\..\..\vcam\build\PocketCam.ax')"
+          CopyToOutputDirectory="PreserveNewest"
+          CopyToPublishDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>
