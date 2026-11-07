@@ -8,6 +8,9 @@
 - 手机端**按需采集**：只有打开麦克风/摄像头开关时才真正采集，关闭立即释放硬件。
 - 电脑端虚拟设备**常驻**：手机没开时输出静音和纯黑帧，软件里不会报“设备无信号”。
 
+> **直接下载**：<https://github.com/HongKai20/PocketCast/releases/latest>
+> 手机装 `PocketCast-android.apk`；电脑解压 `PocketCast-pc.zip` 后双击 `PocketCast.exe`。
+
 ---
 
 ## 1. 架构
